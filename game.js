@@ -61,9 +61,10 @@ setInterval(function(){
 }, 40);
 
 function Up1A() {
-	if (game.state.flower >= 500) {
+	if (game.state.flower >= 500 && game.state.up1A === false) {
 		game.state.flower = game.state.flower - 500;
 		game.state.Clover1Power *= 2;
+		game.state.up1A = true;
 	}
 };
 
