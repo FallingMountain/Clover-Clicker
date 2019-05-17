@@ -13,7 +13,7 @@ var game = {
 };
 var AverageFlowerPerSecond;
 setInterval(function() {
-AverageFlowerPerSecond = Math.round(game.state.Clover1*game.state.Clover1Power + (16.6666667 * game.state.Clover3*game.state.Clover3Power))
+AverageFlowerPerSecond = Math.round(game.state.Clover1*game.state.Clover1Power + ((game.state.Clover3*game.state.Clover3Power)/3))
 }, 20
 	      );
 function UpdateAverageFlowerPerSecond(){
