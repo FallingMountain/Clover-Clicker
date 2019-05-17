@@ -11,6 +11,10 @@ var game = {
 	  Up1A: false
 }
 };
+function wipe() {
+localStorage.removeItem("cc");
+location.reload();
+};
 var AverageFlowerPerSecond;
 setInterval(function() {
 AverageFlowerPerSecond = Math.round(game.state.Clover1*game.state.Clover1Power + ((game.state.Clover3*game.state.Clover3Power)/3))
