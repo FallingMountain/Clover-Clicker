@@ -68,7 +68,9 @@ function Up1A() {
 };
 
 
-
+setInterval(function(){
+	document.getElementById('flower').innerHTML = game.state.flower;
+}, 20);
 
 	
 function save() {
