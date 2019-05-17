@@ -63,12 +63,10 @@ setInterval(function(){
 function Up1A() {
 	if (game.state.flower >= 500) {
 		game.state.flower = game.state.flower - 500;
-		game.state.Up1A = true 
-	};
-
-if (game.state.Up1A = true) {
-	game.state.Clover1Power = game.state.Clover1Power * 2
+		game.state.Clover1Power *= 2;
+	}
 };
+
 
 
 
@@ -79,15 +77,8 @@ function save() {
 function load() {
     if(!localStorage.cc) return;
     game = JSON.parse(atob(localStorage.cc));
-
-    transformToDecimal(game)
 };
-function transformToDecimal(object) { 
-    for(i in object) {
-        if(typeof(object[i]) == "string" && !isNaN(new Decimal(object[i]).mag)) object[i] = new Decimal(object[i]); 
-        if(typeof(object[i]) == "object") transformToDecimal(object[i]) 
-    }
-}
+
 load();
 
 setInterval(function(){
